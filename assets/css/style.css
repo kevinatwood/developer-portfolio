@@ -1,0 +1,179 @@
+:root{
+    --light: #f1faee;
+    --light-blue: #a8dadc;
+    --medium-blue: #457b9d;
+    --dark-blue: #1d3557;
+    --red: #e63946;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    background-color: var(--light);
+}
+header{
+  
+    background-color: var(--dark-blue);
+    display:flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    text-shadow: 1px 1px 0 var(--dark-blue);
+}
+h1{
+    color: var(--light);
+    background-color: var(--medium-blue);
+    padding: 8px;
+    margin-left: 10px;
+    font-size: 200%;
+}
+header nav ul{
+    display:flex;
+    margin-right: 10px;
+    flex-wrap: wrap;
+}
+header nav li{
+    margin: 7px;
+    text-shadow: 1px 1px 0 var(--medium-blue);
+    color: var(--light);
+}
+a{
+    all:unset;
+}
+a:focus{
+    border: dashed;
+    border-width: 1px;
+    border-color: var(--red);
+}
+nav a:hover{
+    cursor:pointer;
+    text-decoration: underline var(--red);
+    font-size: 99%;
+
+}
+.under-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:var(--dark-blue);
+    background: linear-gradient(90deg, var(--light-blue) 0%, var(--medium-blue) 100%);
+}
+.under-header img{
+    margin: 10px;
+    border:solid;
+    border-width: 4px;
+    border-color: var(--medium-blue);
+    height: 100px;
+}
+#about-me{
+    display:flex;
+    justify-content: center;
+    margin: 15px 0;
+    
+}
+
+ h2{
+    display: flex;
+    width:25%;
+    flex:1;
+    font-size: 200%;
+    border-right:3px solid var(--dark-blue);
+    justify-content: flex-end;
+    padding-right: 8px;
+    color: var(--dark-blue);
+    text-shadow: 1px 1px 0 var(--medium-blue);
+}
+.about-me-content{
+    display: flex;
+    flex-wrap: wrap;
+    width:75%;
+    
+}
+.about-me-content p{
+    height: 100px;
+    margin: 10px;
+    width:75%;
+}
+#work{
+    display:flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.card-container{
+    display:flex;
+    flex-wrap: wrap;
+    width: 75%;
+    
+}
+
+.card{
+    flex: 1 300px;
+    background-image: url(https://www.publicdomainpictures.net/pictures/380000/t2/buchstaben-201103.jpg);
+    background-size:cover;
+    background-position: center;
+    height: 100px;
+    margin: 10px;
+    border: solid;
+    border-width: 3px;
+    border-color: var(--medium-blue);
+}
+#card-one{
+    width: 100%;
+    flex-basis: 100%;
+    height: 200px;
+    background-image: url(https://www.publicdomainpictures.net/pictures/380000/t2/buchstaben-201103.jpg);
+    background-size:cover;
+    background-position: center;
+
+}
+.card:hover{
+    .card-header, .card-description{
+        color: var(--light-blue);
+        background-color: var(--dark-blue);
+    }
+}
+.card-header, .card-description{
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+    position: relative;
+    width: 25%;
+    border-right:solid;
+    border-color: var(--medium-blue);
+    border-right-width: 4px;
+}
+.card-description{
+    border-bottom: solid;
+    border-color:var(--medium-blue);
+    border-bottom-width: 4px;
+    border-top: dashed;
+}
+#contact{
+    display:flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+#contact ul{
+    display: flex;
+    width:75%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+#contact li{
+    margin: 10px 35px;
+    color: var(--dark-blue);
+}
+#contact li a:hover{
+    cursor:pointer;
+    text-decoration: underline var(--red);
+    font-size: 99%;
+}
+/* to-do:  
+1. figure out how to align the about me section with the others
+2. make the boxes for each project links
+3. Add media queries 
+4. Add content- picture, about me paragraph, quote
+5. minor details with :hover, try to make the text becoming smaller not change the spacing, hover over boxes makes them do stuff*/
