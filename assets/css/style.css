@@ -85,7 +85,8 @@ h2{
 }
 #about-me{
     display:flex;
-    justify-content: center;  
+    justify-content: center; 
+    margin-top: 15px; 
 }
 #about-me p{
     height: 100px;
@@ -161,15 +162,22 @@ h2{
     list-style-type: none;
 }
 #contact li{
-    margin: 10px 35px;
+    margin: 10px 30px;
     color: var(--dark-blue);
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.contact-icon{
+    display: none;
+
 }
 #contact li a:hover{
     cursor:pointer;
     text-decoration: underline var(--red);
     font-size: 99%;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 705px){
     header nav ul {
         justify-content: space-around;
     }
@@ -187,6 +195,13 @@ h2{
     }
     h2{
         min-width: 145px;
+    }
+    .contact-text{
+        display: none;
+    }
+    .contact-icon{
+        display: flex;
+        height: 24px;
     }
    
 }
