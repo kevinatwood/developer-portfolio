@@ -6,6 +6,8 @@
     --red: #e63946;
 }
 *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 body{
@@ -14,13 +16,13 @@ body{
     background-color: var(--light);
 }
 header{
-  
     background-color: var(--dark-blue);
     display:flex;
     justify-content: space-between;
-    height: 60px;
+    height: fit-content;
     align-items: center;
     text-shadow: 1px 1px 0 var(--dark-blue);
+    padding: 10px;
 }
 h1{
     color: var(--light);
@@ -31,16 +33,17 @@ h1{
 }
 header nav ul{
     display:flex;
-    margin-right: 10px;
     flex-wrap: wrap;
 }
 header nav li{
     margin: 7px;
     text-shadow: 1px 1px 0 var(--medium-blue);
     color: var(--light);
+    text-align: center;
 }
 a{
     all:unset;
+    display: flex;
 }
 a:focus{
     border: dashed;
@@ -67,34 +70,31 @@ nav a:hover{
     border-color: var(--medium-blue);
     height: 100px;
 }
-#about-me{
-    display:flex;
-    justify-content: center;
-    margin: 15px 0;
-    
-}
-
- h2{
+h2{
     display: flex;
     width:25%;
-    flex:1;
+    flex:1 75px;
     font-size: 200%;
     border-right:3px solid var(--dark-blue);
     justify-content: flex-end;
-    padding-right: 8px;
+    padding: 0px 8px;
     color: var(--dark-blue);
     text-shadow: 1px 1px 0 var(--medium-blue);
+    align-items:flex-start;
+    text-align: right;
 }
-.about-me-content{
-    display: flex;
-    flex-wrap: wrap;
-    width:75%;
-    
+#about-me{
+    display:flex;
+    justify-content: center;  
 }
-.about-me-content p{
+#about-me p{
     height: 100px;
-    margin: 10px;
     width:75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 #work{
     display:flex;
@@ -106,7 +106,6 @@ nav a:hover{
     display:flex;
     flex-wrap: wrap;
     width: 75%;
-    
 }
 
 .card{
@@ -127,7 +126,6 @@ nav a:hover{
     background-image: url(https://www.publicdomainpictures.net/pictures/380000/t2/buchstaben-201103.jpg);
     background-size:cover;
     background-position: center;
-
 }
 .card:hover{
     .card-header, .card-description{
@@ -149,11 +147,11 @@ nav a:hover{
     border-color:var(--medium-blue);
     border-bottom-width: 4px;
     border-top: dashed;
+    border-top-width: 1px;
 }
 #contact{
     display:flex;
     justify-content: center;
-    margin: 15px 0;
 }
 #contact ul{
     display: flex;
@@ -171,8 +169,29 @@ nav a:hover{
     text-decoration: underline var(--red);
     font-size: 99%;
 }
+@media screen and (max-width: 600px){
+    header nav ul {
+        justify-content: space-around;
+    }
+    .card-header, .card-description{
+        width: 100%;
+        border-right: 0;
+    }
+    #about-me p{
+        height: fit-content;
+        min-width: none;
+    }
+    #contact ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    h2{
+        min-width: 145px;
+    }
+   
+}
 /* to-do:  
-1. figure out how to align the about me section with the others
+1. make text shrink into each box
 2. make the boxes for each project links
 3. Add media queries 
 4. Add content- picture, about me paragraph, quote
