@@ -128,6 +128,10 @@ h2{
     flex-wrap: wrap;
     width: 75%;
 }
+.card-container a{
+    display: block;
+    height: 100%;
+}
 /* Inside card styling */
 .card{
     flex: 1 300px;
@@ -236,6 +240,5 @@ h2{
 }
 /* to-do:  
 1. Figure out if very narrow pixel display is ok/why icons are so far off the screen on my phone, h2's getting cut off 
-2. make the boxes for each project links
-3. Do I need to add content? picture, about me paragraph, quote
-5. minor details with :hover, try to make the text becoming smaller not change the spacing, hover over boxes makes them have animations*/
+2. add content? picture, about me paragraph, quote
+3. minor details with :hover, try to make the text becoming smaller not change the spacing, hover over boxes makes them have animations*/
