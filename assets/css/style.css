@@ -14,7 +14,9 @@ body{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16px;
     background-color: var(--light);
+    line-height: 1.5;
 }
+/* Header, nav, h1 styling */
 header{
     background-color: var(--dark-blue);
     display:flex;
@@ -30,6 +32,7 @@ h1{
     padding: 8px;
     margin-left: 10px;
     font-size: 200%;
+    border-radius: 2px;
 }
 header nav ul{
     display:flex;
@@ -41,6 +44,7 @@ header nav li{
     color: var(--light);
     text-align: center;
 }
+/* Links-reset all styling, add hover-underline and click animation */
 a{
     all:unset;
     display: flex;
@@ -56,6 +60,7 @@ nav a:hover{
     font-size: 99%;
 
 }
+/* Under header bar with profile picture and blurb */
 .under-header{
     display: flex;
     justify-content: space-between;
@@ -68,8 +73,21 @@ nav a:hover{
     border:solid;
     border-width: 4px;
     border-color: var(--medium-blue);
+    border-radius: 2px;
     height: 100px;
 }
+.under-header p {
+    margin-right: 25px;
+    padding: 10px;
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    border: solid;
+    border-width: 4px;
+    border-color: var(--medium-blue);
+    border-radius: 2px;
+    text-align: center;
+}
+/* All section headers on left side of page with same styling */
 h2{
     display: flex;
     width:25%;
@@ -83,6 +101,7 @@ h2{
     align-items:flex-start;
     text-align: right;
 }
+/* About me section- h2 and paragraph */
 #about-me{
     display:flex;
     justify-content: center; 
@@ -97,6 +116,7 @@ h2{
     padding-left: 10px;
     padding-right: 10px;
 }
+/* Work section- h2 and 5 cards for project links */
 #work{
     display:flex;
     justify-content: center;
@@ -108,7 +128,7 @@ h2{
     flex-wrap: wrap;
     width: 75%;
 }
-
+/* Inside card styling */
 .card{
     flex: 1 300px;
     background-image: url(https://www.publicdomainpictures.net/pictures/380000/t2/buchstaben-201103.jpg);
@@ -119,6 +139,7 @@ h2{
     border: solid;
     border-width: 3px;
     border-color: var(--medium-blue);
+    border-radius: 2px;
 }
 #card-one{
     width: 100%;
@@ -150,6 +171,7 @@ h2{
     border-top: dashed;
     border-top-width: 1px;
 }
+/*Contact section- h2 and 3 links. Icons hidden */
 #contact{
     display:flex;
     justify-content: center;
@@ -177,9 +199,19 @@ h2{
     text-decoration: underline var(--red);
     font-size: 99%;
 }
+/* Narrow px styling */
 @media screen and (max-width: 705px){
+    header{
+        flex-direction: column;
+    }
+    h1{
+        text-align: center;
+    }
     header nav ul {
         justify-content: space-around;
+    }
+    h2{
+        min-width: 145px;
     }
     .card-header, .card-description{
         width: 100%;
@@ -193,9 +225,6 @@ h2{
         flex-direction: column;
         align-items: center;
     }
-    h2{
-        min-width: 145px;
-    }
     .contact-text{
         display: none;
     }
@@ -206,8 +235,7 @@ h2{
    
 }
 /* to-do:  
-1. make text shrink into each box
+1. Figure out if very narrow pixel display is ok/why icons are so far off the screen on my phone, h2's getting cut off 
 2. make the boxes for each project links
-3. Add media queries 
-4. Add content- picture, about me paragraph, quote
-5. minor details with :hover, try to make the text becoming smaller not change the spacing, hover over boxes makes them do stuff*/
+3. Do I need to add content? picture, about me paragraph, quote
+5. minor details with :hover, try to make the text becoming smaller not change the spacing, hover over boxes makes them have animations*/
