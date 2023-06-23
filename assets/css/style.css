@@ -271,6 +271,11 @@ h2 {
         margin-right:0px;
     }
 
+    #contact img{
+        height: 24px;
+        width:24px;
+    }
+
     .contact-text {
         display: none;
     }
