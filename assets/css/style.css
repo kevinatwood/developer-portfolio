@@ -69,7 +69,7 @@ a:focus {
 a:hover {
     cursor: pointer;
     text-decoration: underline var(--red);
-    font-size: 99%;
+    font-size: 95%;
 
 }
 
